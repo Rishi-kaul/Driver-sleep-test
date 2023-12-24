@@ -14,15 +14,15 @@ def EAR(eye): #eye aspect ratio
     C= distance.euclidean(eye[0],eye[3])
     ear = (A+B)/(2.0*C)
     return ear
-(lstart,lend) = face_utils.FACIAL_LANDMARKS_68_IDXS("left_eye")
-(rstart,rend) = face_utils.FACIAL_LANDMARKS_68_IDXS("right_eye")
+(lstart,lend) = face_utils.FACIAL_LANDMARKS_68_IDXS["left_eye"]
+(rstart,rend) = face_utils.FACIAL_LANDMARKS_68_IDXS["right_eye"]
 """ why we need ear as it remains constant but as eyes cloes its frame drops  value of a+b decreses """
 
 
 
 
 detect = dlib.get_frontal_face_detector()
-predict = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+predict = dlib.shape_predictor("shape_predictor_68_face_landmarks .dat")
 
 cap = cv2.VideoCapture(0)
 
